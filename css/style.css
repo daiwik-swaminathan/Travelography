@@ -24,7 +24,7 @@ a
 	
 	color: #fff;
 	text-align: center;
-	
+	font-family: Bradley Hand, cursive;
 }
 
 .image-grid
@@ -32,5 +32,38 @@ a
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	line-height:0px;
+}
+
+.linkable-image
+{
+	position: relative;
+}
+
+.linkable-image img
+{
+	opacity: 0.75;
+}
+
+.linkable-image-title
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+    font-family: Bradley Hand, cursive;
+    font-size:25px;
+}
+
+
+@media only screen and (max-width: 768px) 
+{
+	.image-grid
+	{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		line-height:0px;
+	}
 }
 
