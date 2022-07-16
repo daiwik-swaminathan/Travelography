@@ -1,7 +1,7 @@
 body
 {
 	margin:0px;
-	background-color:#000;
+	background-color:#212121;
 }
 
 a
@@ -21,7 +21,7 @@ a
 
 #main-footer
 {
-	
+	background-color:#212121;
 	color: #fff;
 	text-align: center;
 	font-family: Bradley Hand, cursive;
@@ -169,6 +169,17 @@ a
 		grid-gap: 1px;
 		grid-template-columns: repeat(1, 1fr);
 		grid-auto-flow: dense;
+	}
+	
+	.panoramic
+	{
+		grid-column: span 1;
+	}
+
+	.bigger
+	{
+		grid-row: span 1;
+		grid-column: span 1;
 	}
 }
 
