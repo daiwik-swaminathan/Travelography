@@ -126,6 +126,17 @@ a
 		font-family: Bradley Hand, cursive;
 		font-size:24px;
 	}
+	
+	.panoramic
+	{
+		grid-column: span 1;
+	}
+
+	.bigger
+	{
+		grid-row: span 1;
+		grid-column: span 1;
+	}
 }
 
 @media (orientation: landscape) and (max-width: 700px) 
@@ -152,6 +163,17 @@ a
 		font-family: Bradley Hand, cursive;
 		font-size:16px;
 	}
+	
+	.panoramic
+	{
+		grid-column: span 1;
+	}
+
+	.bigger
+	{
+		grid-row: span 1;
+		grid-column: span 1;
+	}
 }
 
 @media (orientation: portrait)
@@ -165,10 +187,10 @@ a
 	
 	.gallery
 	{
-		display: grid;
-		line-height:1px;
-		grid-template-columns: repeat(1, 1fr);
-		grid-auto-flow: dense;
+		display: block;
+		line-height:11px;
+		/*grid-template-columns: repeat(1, 1fr);*/
+		/*grid-auto-flow: dense;*/
 	}
 	
 	.panoramic
