@@ -47,13 +47,17 @@ a
 .linkable-image-title
 {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	color: white;
     font-family: Bradley Hand, cursive;
-    font-size:25px;
+    font-size:48px;
 }
 
 
