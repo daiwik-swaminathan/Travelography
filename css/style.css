@@ -1,0 +1,36 @@
+body
+{
+	margin:0px;
+	background-color:#000;
+}
+
+a
+{
+	color:white;
+	text-decoration: none;
+}
+
+#main-header
+{
+	background-color:#212121;
+	color:white;
+	text-align:center;
+	font-family: Bradley Hand, cursive;
+	overflow:hidden;
+}
+
+#main-footer
+{
+	
+	color: #fff;
+	text-align: center;
+	
+}
+
+.image-grid
+{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	line-height:0px;
+}
+
