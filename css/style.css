@@ -188,7 +188,7 @@ a
 	.gallery
 	{
 		display: block;
-		line-height:50px;
+		line-height:30px;
 		/*grid-template-columns: repeat(1, 1fr);*/
 		/*grid-auto-flow: dense;*/
 	}
