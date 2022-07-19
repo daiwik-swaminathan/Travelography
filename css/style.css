@@ -27,16 +27,22 @@ a
 	font-family: Bradley Hand, cursive;
 }
 
+
+
 .image-grid
 {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	line-height:0px;
+	
+	transition: 0.4s;
 }
 
 .linkable-image
 {
 	position: relative;
+	
+	transition: 0.4s;
 }
 
 .linkable-image:hover img
@@ -44,11 +50,13 @@ a
 	opacity: 0.5;
 }
 
+/*
 .linkable-image:hover p
 {
 	visibility: visible;
 	translate: translateY(0);
 }
+*/
 
 .linkable-image img
 {
@@ -60,15 +68,26 @@ a
 {
 	position: absolute;
 	
+	width:100%;
+	
 	top: 45%;
 	left: 50%;
 	
 	transform: translate(-50%, -50%);
 	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
 	color: white;
 	font-family: Bradley Hand, cursive;
+	font-size: 36px;
+	
+	transition: 0.4s;
 }
 
+/*
 .linkable-image p
 {
 	position: absolute;
@@ -87,8 +106,9 @@ a
 	color: white;
 	font-family: Bradley Hand, cursive;
 }
-	
+*/
 
+/*
 .linkable-image-title
 {
 	position: absolute;
@@ -112,6 +132,7 @@ a
 	opacity: 0.5;
 	background: Black;
 }
+*/
 
 .gallery
 {	
@@ -119,6 +140,8 @@ a
 	grid-gap: 1px;
 	grid-template-columns: repeat(3, 1fr);
 	grid-auto-flow: dense;
+	
+	transition: 0.4s;
 }
 
 .vertical
@@ -148,6 +171,7 @@ a
 	height: 100%;
 	display:block;
 	
+	transition: 0.4s;
 }
 
 /*
@@ -169,8 +193,11 @@ a
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		line-height:0px;
+		
+		transition: 0.4s;
 	}
 	
+	/*
 	.linkable-image-title
 	{
 		position: absolute;
@@ -186,6 +213,23 @@ a
 		font-family: Bradley Hand, cursive;
 		font-size:24px;
 	}
+	*/
+	
+	.linkable-image h1
+	{
+		position: absolute;
+		
+		top: 45%;
+		left: 50%;
+		
+		transform: translate(-50%, -50%);
+		
+		color: white;
+		font-family: Bradley Hand, cursive;
+		font-size: 24px;
+		
+		transition: 0.4s;
+	}
 }
 
 @media (orientation: landscape) and (max-width: 700px) 
@@ -195,8 +239,10 @@ a
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		line-height:0px;
+		transition: 0.4s;
 	}
 	
+	/*
 	.linkable-image-title
 	{
 		position: absolute;
@@ -212,6 +258,22 @@ a
 		font-family: Bradley Hand, cursive;
 		font-size:16px;
 	}
+	*/
+	
+	.linkable-image h1
+	{
+		position: absolute;
+		
+		top: 45%;
+		left: 50%;
+		
+		transform: translate(-50%, -50%);
+		
+		color: white;
+		font-family: Bradley Hand, cursive;
+		font-size: 16px;
+		transition: 0.4s;
+	}
 }
 
 @media (orientation: portrait)
@@ -221,6 +283,7 @@ a
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		line-height:0px;
+		transition: 0.4s;
 	}
 	
 	.gallery
@@ -229,6 +292,7 @@ a
 		line-height:1px;
 		grid-template-columns: repeat(1, 1fr);
 		grid-auto-flow: dense;
+		transition: 0.4s;
 	}
 	
 	.small-panoramic
