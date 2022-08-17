@@ -6,6 +6,8 @@ body
 	background-size: 400% 400%;
 	position: relative;
 	animation: change 10s ease-in-out infinite; */
+
+	background-color: black;
 }
 
 /* @keyframes change
