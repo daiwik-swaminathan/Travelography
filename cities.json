@@ -40,5 +40,101 @@
         "state":"/",
         "country":"India",
         "imageTags":["", "vertical", "bigger", "large-panoramic", "", "", "vertical", "", "", "", "vertical", "small-panoramic"]
+    },
+    {
+		"name":"Avila Beach",
+        "state":"/California/",
+        "country":"United States",
+        "imageTags":["", "bigger", "bigger", "large-panoramic", "", "", ""]
+    },
+    {
+		"name":"Carmel",
+        "state":"/California/",
+        "country":"United States",
+        "imageTags":["bigger", "", "", "large-panoramic", "", "bigger", "", "large-panoramic", "large-panoramic"]
+    },
+    {
+		"name":"Half Moon Bay",
+        "state":"/California/",
+        "country":"United States",
+        "imageTags":["", "bigger", "", "small-panoramic", ""]
+    },
+    {
+		"name":"Marine Headlands",
+        "state":"/California/",
+        "country":"United States",
+        "imageTags":["", "", "", "", ""]
+    },
+    {
+		"name":"Muir Woods",
+        "state":"/California/",
+        "country":"United States",
+        "imageTags":["", "vertical", "", "", ""]
+    },
+    {
+		"name":"Santa Barbara",
+        "state":"/California/",
+        "country":"United States",
+        "imageTags":["bigger", "", "vertical", "", "large-panoramic", "", "vertical", "", "", "vertical", "vertical", "", "large-panoramic", "large-panoramic"]
+    },
+    {
+		"name":"Niagra Falls",
+        "state":"/New York/",
+        "country":"United States",
+        "imageTags":["bigger", "", "", "", "bigger", "", "", "large-panoramic", "", "", "bigger", "vertical", "", "", "", "large-panoramic"]
+    },
+    {
+		"name":"Rochester",
+        "state":"/New York/",
+        "country":"United States",
+        "imageTags":["bigger", "", "", "large-panoramic", "", "vertical", "vertical", "vertical", "vertical", "vertical", "", "large-panoramic"]
+    },
+    {
+		"name":"Letchworth State Park",
+        "state":"/New York/",
+        "country":"United States",
+        "imageTags":["bigger", "vertical", "", "vertical", "", "", "vertical", "small-panoramic", "large-panoramic"]
+    },
+    {
+		"name":"Kauai",
+        "state":"/Hawaii/",
+        "country":"United States",
+        "imageTags":["bigger", "", "vertical", "", "large-panoramic", "", "bigger", "", "vertical", "large-panoramic", "", "vertical", "", "bigger", "large-panoramic", "", "vertical", "", "bigger", "vertical", "", "vertical", "", "large-panoramic", "", "bigger", "vertical", "", "large-panoramic", "", "vertical", "", "vertical", "", "vertical", "small-panoramic"]
+    },
+    {
+		"name":"Seattle",
+        "state":"/Washington/",
+        "country":"United States",
+        "imageTags":["bigger", "", "", "", "bigger", "", "large-panoramic", "", "bigger", "", "bigger", "", "vertical", "", ""]
+    },
+    {
+		"name":"Bellevue",
+        "state":"/Washington/",
+        "country":"United States",
+        "imageTags":["bigger", "", "", "", "bigger", "", "", "", "bigger", "vertical", "large-panoramic", ""]
+    },
+    {
+		"name":"Mt. Rainer National Park",
+        "state":"/Washington/",
+        "country":"United States",
+        "imageTags":["", "", "bigger", "", "", "", "vertical", "", "bigger", "bigger", "", "vertical", "", "", "", "vertical", "", "", "large-panoramic"]
+    },
+    {
+		"name":"Olympic National Park",
+        "state":"/Washington/",
+        "country":"United States",
+        "imageTags":["bigger", "", "vertical", "", "", "vertical", "bigger", "", "", "vertical", "", "vertical", "", "vertical", "", ""]
+    },
+    {
+		"name":"Grand Canyon",
+        "state":"/Arizona/",
+        "country":"United States",
+        "imageTags":["bigger", "vertical", "large-panoramic", "", "bigger", ""]
+    },
+    {
+		"name":"Las Vegas",
+        "state":"/Nevada/",
+        "country":"United States",
+        "imageTags":["bigger", "vertical", "vertical", "bigger"]
     }
 ]

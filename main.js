@@ -1,4 +1,5 @@
 var countries = []
+var states = []
 var cities = []
 
 // function generateCountryData()
@@ -72,7 +73,14 @@ function transformGrid(e)
 
     let locationName = e.target.textContent
 
+    // print(e.target)
+
     if(mapCountry(locationName))
+    {
+        return
+    }
+
+    if(mapState(locationName))
     {
         return
     }
@@ -124,6 +132,8 @@ function mapCity(cityName)
 
                 imageDiv.className = cities[i].imageTags[j]
 
+                // console.log(states[i].country + '/' + stateName + '/' + cityName + '/' + cityName + '1')
+
                 imageDiv.innerHTML = `<img src="images/${cities[i].country}${cities[i].state}${cityName}/${cityName}${(j+1)}.jpeg" alt="no image">`
             
                 photoGallery.appendChild(imageDiv)
@@ -134,11 +144,57 @@ function mapCity(cityName)
     changeBody(photoGallery)
 }
 
+function mapState(stateName)
+{
+    let found = false
+
+    // build output grid of state's entries
+    var stateEntries = document.createElement('div')
+    stateEntries.className = 'singleList'
+
+    for(let i=0; i<states.length; i++)
+    {
+        if(states[i].name == stateName)
+        {
+            found = true
+            if(states[i].entries.length >= 6)
+            {
+                stateEntries.className = 'image-grid'
+            }
+            for(let j=0; j<states[i].entries.length; j++)
+            {
+                let entryName = states[i].entries[j]
+
+                stateEntries.innerHTML +=
+                `
+                    <div class="linkable-image"">
+                        
+                        <img src="images/${states[i].country}/${stateName}/${entryName}/${entryName}1.jpeg" alt="no image" width=100%>
+                        <h1>${entryName}</h1>
+                        
+                    </div>
+                `
+            }
+        }
+    }
+
+    if(!found)
+    {
+        return
+    }
+
+    changeBody(stateEntries)
+
+    addClickableToLinkable()
+
+    return found
+}
+
 function mapCountry(countryName)
 {
     // get the array of countries
     // var countries = JSON.parse(localStorage.getItem('countries'))
-    
+
     let found = false
 
     // build output grid of country's entries
@@ -201,6 +257,17 @@ function loadJSONFiles()
         for(let i=0; i<data.length; i++)
         {
             countries.push(data[i])
+        }
+        return data
+    })
+    .catch(err => console.log(err))
+
+    fetch('./states.json')
+    .then(response => response.json())
+    .then(function(data) {
+        for(let i=0; i<data.length; i++)
+        {
+            states.push(data[i])
         }
         return data
     })
