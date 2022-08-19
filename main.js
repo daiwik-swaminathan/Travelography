@@ -1,5 +1,6 @@
 // To do
 // rename website
+// when someone clicks on the top bar links, make hidden to the lis in the uis (check mobile issue)
 // make home page dynamically loaded instead of redirected if causes issue
 
 var countries = []
@@ -162,6 +163,7 @@ function mapState(stateName)
 
 function mapCountry(countryName)
 {
+    console.log(countryName)
     let found = false
 
     // build output grid of country's entries
@@ -171,12 +173,6 @@ function mapCountry(countryName)
     // build new nav bar
     var navBarUl = document.querySelector('.primary-navigation ul')
     navBarUl.innerHTML = getMinimumNavBarUl()
-
-    // var countryLinkLi = document.createElement('li')
-    // countryLinkLi.innerHTML =  `<a class="dropdown-text">${countryName} &rtrif;</a>`
-
-    // var countryLinkUl = document.createElement('ul')
-    // countryLinkUl.className = 'dropdown'
 
     for(let i=0; i<countries.length; i++)
     {
@@ -190,8 +186,6 @@ function mapCountry(countryName)
             for(let j=0; j<countries[i].entries.length; j++)
             {
                 let entryName = countries[i].entries[j]
-
-                // countryLinkUl.innerHTML += `<li>${entryName}</li>`
 
                 countryEntries.innerHTML +=
                 `
