@@ -38,7 +38,7 @@ function transformGrid(e)
     //             console.log('ul is visible')
     //         }
     //     }
-    // } 
+    // }  
 
     // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
     // {
