@@ -86,11 +86,10 @@ a
 	left: 0;
 	display: none;
 	background: black;
-	z-index:999;
 }
 
 
-/* .primary-navigation ul li:hover > ul,
+.primary-navigation ul li:hover > ul,
 .primary-navigation ul li ul:hover
 {
 	visibility: visible;
@@ -100,7 +99,8 @@ a
 	text-align: left;
 	padding-top: 20px;
 	padding-left: 20px;
-} */
+	z-index:999;
+}
 
 .primary-navigation ul li ul li
 {
@@ -432,7 +432,8 @@ ul li ul li a
 	
 }
 
-@media (hover: hover) {
+
+/* @media (hover: hover) {
 	.primary-navigation ul li:hover > ul,
 	.primary-navigation ul li ul:hover
 	{
@@ -443,6 +444,7 @@ ul li ul li a
 		text-align: left;
 		padding-top: 20px;
 		padding-left: 20px;
+		z-index:999;
 	}
-}
+} */
 

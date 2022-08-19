@@ -13,9 +13,40 @@ function transformGrid(e)
 
     let locationName = e.target.textContent
 
+    console.log(e.target.parentNode)
+
     locationName = locationName.replace(/[^a-zA-Z. ]/g, "").trim()
 
-    if(locationName.includes('Photography'))
+    var parentElement = e.target.parentNode
+    
+    // console.log(parentElement.tagName) = LI
+
+    // if(parentElement.tagName == 'LI') // add the mobile check here
+    // {
+    //     var dropDownUl = parentElement.querySelector('.dropdown')
+    //     if(dropDownUl)
+    //     {
+    //         if(dropDownUl.offsetParent == null)
+    //         {
+    //             console.log('ul is hidden, going to make it visible')
+    //             dropDownUl.style.visibility = 'visible'
+    //             console.log(dropDownUl.offsetParent)
+    //             return
+    //         }
+    //         else
+    //         {
+    //             console.log('ul is visible')
+    //         }
+    //     }
+    // } 
+
+    // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+    // {
+    // }
+
+    
+
+    if(locationName == 'Photography')
     {
         window.location.href = "index.html"
         return
