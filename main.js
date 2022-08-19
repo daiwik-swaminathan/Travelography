@@ -1,73 +1,10 @@
+// To do
+// rename website
+// make home page dynamically loaded instead of redirected if causes issue
+
 var countries = []
 var states = []
 var cities = []
-
-// var test = []
-
-// function generateCountryData()
-// {
-//     // if there is no local web storage, create it
-//     if(localStorage.getItem('countries') === null || true)
-//     {
-//         // make the array of countries
-//         var countries = []
-
-//         // make fiji data
-//         var fiji = {
-//             name: 'Fiji',
-//             entries: []
-//         }
-//         fiji.entries.push('Nadi')
-
-//         // add fiji to the array
-//         countries.push(fiji)
-
-//         // make canada data
-//         var canada = {
-//             name: 'Canada',
-//             entries: []
-//         }
-//         canada.entries.push('Banff')
-//         canada.entries.push('Toronto')
-
-//         // add canada to the array
-//         countries.push(canada)
-
-//         // make india data
-//         var india = {
-//             name: 'India',
-//             entries: []
-//         }
-//         india.entries.push('Tamil Nadu')
-//         india.entries.push('Kerala')
-
-//         // add india to the array
-//         countries.push(india)
-
-//         // make unitedkingdom data
-//         var unitedkingdom = {
-//             name: 'United Kingdom',
-//             entries: []
-//         }
-//         unitedkingdom.entries.push('London')
-
-//         // add unitedkingdom to the array
-//         countries.push(unitedkingdom)
-
-//         // make unitedarabemirates data
-//         var unitedarabemirates = {
-//             name: 'United Arab Emirates',
-//             entries: []
-//         }
-//         unitedarabemirates.entries.push('Dubai')
-
-//         // add unitedkingdom to the array
-//         countries.push(unitedarabemirates)
-
-//         // set the array to local storage
-//         localStorage.setItem('countries', JSON.stringify(countries))
-//     }    
-// }
 
 function transformGrid(e)
 {
@@ -83,25 +20,6 @@ function transformGrid(e)
         return
     }
 
-    // console.log(locationName+'.')
-
-    // test.push(locationName)
-
-    // console.log('test len is: ' + test.length)
-
-    // if(test.length == 2)
-    // {
-    //     console.log('len same')
-    //     if(test[0] == test[1])
-    //     {
-    //         console.log('same')
-    //     }
-    //     else
-    //     {
-    //         console.log('usa not same')
-    //     }
-    // }
-
     if(mapCountry(locationName))
     {
         return
@@ -111,8 +29,6 @@ function transformGrid(e)
     {
         return
     }
-
-    console.log(locationName)
     
     mapCity(locationName)
 }
@@ -246,9 +162,6 @@ function mapState(stateName)
 
 function mapCountry(countryName)
 {
-    // get the array of countries
-    // var countries = JSON.parse(localStorage.getItem('countries'))
-
     let found = false
 
     // build output grid of country's entries
@@ -310,8 +223,6 @@ function mapCountry(countryName)
     return found
 }
 
-// generateCountryData()
-
 function addDropdownTextLi(locationObject, isEndpoint)
 {
     var navBarUl = document.querySelector('.primary-navigation ul')
@@ -372,7 +283,7 @@ function addClickableToLinkable()
 
 function loadJSONFiles()
 {
-    fetch('./countries.json')
+    fetch('./data/countries.json')
     .then(response => response.json())
     .then(function(data) {
         for(let i=0; i<data.length; i++)
@@ -383,7 +294,7 @@ function loadJSONFiles()
     })
     .catch(err => console.log(err))
 
-    fetch('./states.json')
+    fetch('./data/states.json')
     .then(response => response.json())
     .then(function(data) {
         for(let i=0; i<data.length; i++)
@@ -394,7 +305,7 @@ function loadJSONFiles()
     })
     .catch(err => console.log(err))
 
-    fetch('./cities.json')
+    fetch('./data/cities.json')
     .then(response => response.json())
     .then(function(data) {
         for(let i=0; i<data.length; i++)
