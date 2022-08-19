@@ -2,6 +2,8 @@ var countries = []
 var states = []
 var cities = []
 
+// var test = []
+
 // function generateCountryData()
 // {
 //     // if there is no local web storage, create it
@@ -73,7 +75,32 @@ function transformGrid(e)
 
     let locationName = e.target.textContent
 
-    // print(e.target)
+    locationName = locationName.replace(/[^a-zA-Z. ]/g, "").trim()
+
+    if(locationName.includes('Photography'))
+    {
+        window.location.href = "index.html"
+        return
+    }
+
+    // console.log(locationName+'.')
+
+    // test.push(locationName)
+
+    // console.log('test len is: ' + test.length)
+
+    // if(test.length == 2)
+    // {
+    //     console.log('len same')
+    //     if(test[0] == test[1])
+    //     {
+    //         console.log('same')
+    //     }
+    //     else
+    //     {
+    //         console.log('usa not same')
+    //     }
+    // }
 
     if(mapCountry(locationName))
     {
@@ -84,6 +111,8 @@ function transformGrid(e)
     {
         return
     }
+
+    console.log(locationName)
     
     mapCity(locationName)
 }
@@ -111,6 +140,13 @@ function changeBody(newEntries)
         imageGrid.remove()
     }
 
+    // delete gallery
+    var gallery = document.querySelector('.gallery')
+    if(gallery)
+    {
+        gallery.remove()
+    }
+
     // add new box(es)
     var bodyContainer = document.querySelector('.body-container')
     bodyContainer.appendChild(newEntries)
@@ -122,6 +158,10 @@ function mapCity(cityName)
     var photoGallery = document.createElement('div')
     photoGallery.className = 'gallery'
 
+    // build new nav bar
+    var navBarUl = document.querySelector('.primary-navigation ul')
+    navBarUl.innerHTML = getMinimumNavBarUl()
+
     for(let i=0; i<cities.length; i++)
     {
         if(cities[i].name == cityName)
@@ -132,16 +172,23 @@ function mapCity(cityName)
 
                 imageDiv.className = cities[i].imageTags[j]
 
-                // console.log(states[i].country + '/' + stateName + '/' + cityName + '/' + cityName + '1')
-
                 imageDiv.innerHTML = `<img src="images/${cities[i].country}${cities[i].state}${cityName}/${cityName}${(j+1)}.jpeg" alt="no image">`
             
                 photoGallery.appendChild(imageDiv)
             }
+
+            addDropdownTextLi(countries[cities[i].countryID], false)
+            if(cities[i].stateID >= 0)
+            {
+                addDropdownTextLi(states[cities[i].stateID], false)
+            }
+            addDropdownTextLi(cities[i], true)
         }
     }
 
     changeBody(photoGallery)
+
+    addClickableToLinkable()
 }
 
 function mapState(stateName)
@@ -151,6 +198,10 @@ function mapState(stateName)
     // build output grid of state's entries
     var stateEntries = document.createElement('div')
     stateEntries.className = 'singleList'
+
+    // build new nav bar
+    var navBarUl = document.querySelector('.primary-navigation ul')
+    navBarUl.innerHTML = getMinimumNavBarUl()
 
     for(let i=0; i<states.length; i++)
     {
@@ -175,6 +226,9 @@ function mapState(stateName)
                     </div>
                 `
             }
+
+            addDropdownTextLi(countries[states[i].countryID], false)
+            addDropdownTextLi(states[i], false)
         }
     }
 
@@ -201,6 +255,16 @@ function mapCountry(countryName)
     var countryEntries = document.createElement('div')
     countryEntries.className = 'singleList'
 
+    // build new nav bar
+    var navBarUl = document.querySelector('.primary-navigation ul')
+    navBarUl.innerHTML = getMinimumNavBarUl()
+
+    // var countryLinkLi = document.createElement('li')
+    // countryLinkLi.innerHTML =  `<a class="dropdown-text">${countryName} &rtrif;</a>`
+
+    // var countryLinkUl = document.createElement('ul')
+    // countryLinkUl.className = 'dropdown'
+
     for(let i=0; i<countries.length; i++)
     {
         if(countries[i].name == countryName)
@@ -214,6 +278,8 @@ function mapCountry(countryName)
             {
                 let entryName = countries[i].entries[j]
 
+                // countryLinkUl.innerHTML += `<li>${entryName}</li>`
+
                 countryEntries.innerHTML +=
                 `
                     <div class="linkable-image"">
@@ -224,6 +290,8 @@ function mapCountry(countryName)
                     </div>
                 `
             }
+
+            addDropdownTextLi(countries[i], false)
         }
     }
 
@@ -231,6 +299,9 @@ function mapCountry(countryName)
     {
         return
     }
+
+    // countryLinkLi.appendChild(countryLinkUl)
+    // navBarUl.appendChild(countryLinkLi)
 
     changeBody(countryEntries)
 
@@ -241,11 +312,61 @@ function mapCountry(countryName)
 
 // generateCountryData()
 
+function addDropdownTextLi(locationObject, isEndpoint)
+{
+    var navBarUl = document.querySelector('.primary-navigation ul')
+
+    var linkLi = document.createElement('li')
+    linkLi.innerHTML =  `<a class="dropdown-text">${locationObject.name} &rtrif;</a>`
+
+    if(!isEndpoint)
+    {
+        var linkUl = document.createElement('ul')
+        linkUl.className = 'dropdown'
+
+        for(let i=0; i<locationObject.entries.length; i++)
+        {
+            linkUl.innerHTML += `<li>${locationObject.entries[i]}</li>`
+        }
+
+        linkLi.appendChild(linkUl)
+    }
+
+    navBarUl.appendChild(linkLi)
+}
+
+function getMinimumNavBarUl()
+{
+    return `
+    <li>
+        <a class="dropdown-text">Photography &rtrif;</a>
+        <ul class="dropdown">
+            <li>United States</li>
+            <li>Canada</li>
+            <li>Fiji</li>
+            <li>India</li>
+            <li>United Kingdom</li>
+            <li>United Arab Emirates</li>
+        </ul>
+    </li>
+    `
+}
+
 function addClickableToLinkable()
 {
     var linkableImages = document.querySelectorAll('.linkable-image')
     linkableImages.forEach(box => {
         box.addEventListener('click', transformGrid)
+    })
+
+    var navBarDropdowns = document.querySelectorAll('.dropdown li')
+    navBarDropdowns.forEach(box => {
+        box.addEventListener('click', transformGrid)
+    })
+
+    var navBarLinks = document.querySelectorAll('.dropdown-text')
+    navBarLinks.forEach(link => {
+        link.addEventListener('click', transformGrid)
     })
 }
 

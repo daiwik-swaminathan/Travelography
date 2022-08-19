@@ -212,7 +212,7 @@ ul li ul li a
 
 .singleList
 {
-	cursor: pointer;
+	cursor: pointer; 
 }
 
 .linkable-image:hover img
@@ -245,7 +245,7 @@ ul li ul li a
 	width:100%;
 	height:100%;
 	
-	top: 45%;
+	top: 50%;
 	left: 50%;
 	
 	transform: translate(-50%, -50%);
@@ -254,6 +254,8 @@ ul li ul li a
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	margin: 0;
 	
 	color: white;
 	font-family: Bradley Hand, cursive;
