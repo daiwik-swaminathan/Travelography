@@ -89,7 +89,8 @@ a
 	z-index:999;
 }
 
-.primary-navigation ul li:hover > ul,
+
+/* .primary-navigation ul li:hover > ul,
 .primary-navigation ul li ul:hover
 {
 	visibility: visible;
@@ -99,7 +100,7 @@ a
 	text-align: left;
 	padding-top: 20px;
 	padding-left: 20px;
-}
+} */
 
 .primary-navigation ul li ul li
 {
@@ -432,19 +433,16 @@ ul li ul li a
 }
 
 @media (hover: hover) {
-	/*
 	.primary-navigation ul li:hover > ul,
 	.primary-navigation ul li ul:hover
-    {
-        background-color: blue;
-	}
-	*/
-
-	/*
-	.primary-navigation ul li ul li:hover
 	{
-		visibility: hidden;
+		visibility: visible;
+		opacity: 0.85;
+		display: block;
+		min-width: 300px;
+		text-align: left;
+		padding-top: 20px;
+		padding-left: 20px;
 	}
-	*/
 }
 
