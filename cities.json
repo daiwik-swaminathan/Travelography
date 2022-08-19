@@ -1,0 +1,44 @@
+[
+	{
+		"name":"Nadi",
+        "state":"/",
+        "country":"Fiji",
+        "imageTags":["", "bigger", "", "large-panoramic", "bigger", "", ""]
+    },
+    {
+		"name":"London",
+        "state":"/",
+        "country":"United Kingdom",
+        "imageTags":["bigger", "", "vertical", "bigger", "", "", "vertical", "", "", "large-panoramic", "bigger", "", "", "bigger", "vertical", "", "large-panoramic"]
+    },
+    {
+		"name":"Dubai",
+        "state":"/",
+        "country":"United Arab Emirates",
+        "imageTags":["", "bigger", "", "bigger", "", "", "", "bigger", ""]
+    },
+    {
+		"name":"Banff",
+        "state":"/",
+        "country":"Canada",
+        "imageTags":["", "bigger", "", "large-panoramic", "bigger", "", "", "large-panoramic", "vertical", "bigger", "large-panoramic", "bigger", "", "vertical", "small-panoramic", "large-panoramic"]
+    },
+    {
+		"name":"Toronto",
+        "state":"/",
+        "country":"Canada",
+        "imageTags":["bigger", "vertical", "large-panoramic", "vertical", "bigger", "", "vertical", "", "vertical", "", "vertical", "", "bigger", "vertical", "", "vertical", "", "vertical", "bigger", "", "vertical", "", "vertical", "", "vertical", "", "vertical", "small-panoramic", "small-panoramic"]
+    },
+    {
+		"name":"Tamil Nadu",
+        "state":"/",
+        "country":"India",
+        "imageTags":["", "vertical", "", "", "", "", "vertical", "", "", ""]
+    },
+    {
+		"name":"Kerala",
+        "state":"/",
+        "country":"India",
+        "imageTags":["", "vertical", "bigger", "large-panoramic", "", "", "vertical", "", "", "", "vertical", "small-panoramic"]
+    }
+]

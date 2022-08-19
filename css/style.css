@@ -29,7 +29,8 @@ body
 
 .body-container
 {
-	background-color: #212121;
+	/* background-color: #212121; */
+	background-color: black;
 }
 
 a
@@ -198,8 +199,6 @@ ul li ul li a
 	line-height:0px;
 	
 	transition: 0.4s;
-	
-	
 }
 
 .linkable-image
@@ -208,7 +207,12 @@ ul li ul li a
 	
 	transition: 0.4s;
 	
-	
+	cursor: pointer;
+}
+
+.singleList
+{
+	cursor: pointer;
 }
 
 .linkable-image:hover img
@@ -239,6 +243,7 @@ ul li ul li a
 	position: absolute;
 	
 	width:100%;
+	height:100%;
 	
 	top: 45%;
 	left: 50%;

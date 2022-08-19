@@ -1,0 +1,32 @@
+[
+	{
+        "name":"California",
+        "country":"United States",
+        "entries":["Avila Beach", "Carmel", "Half Moon Bay", "Marine Headlands", "Muir Woods", "Santa Barbara"]
+	},
+	{
+        "name":"New York",
+        "country":"United States",
+        "entries":["Niagra Falls", "Rochester", "Letchworth State Park"]
+	},
+	{
+        "name":"Hawaii",
+        "country":"United States",
+        "entries":["Kauai"]
+    },
+    {
+        "name":"Washington",
+        "country":"United States",
+        "entries":["Seattle", "Bellevue", "Mt. Rainer National Park", "Olympic National Park"]
+    },
+    {
+        "name":"Arizona",
+        "country":"United States",
+        "entries":["Grand Canyon"]
+    },
+    {
+        "name":"Nevada",
+        "country":"United States",
+        "entries":["Las Vegas"]
+    }
+]

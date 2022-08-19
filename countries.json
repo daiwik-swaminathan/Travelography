@@ -1,0 +1,26 @@
+[
+	{
+		"name":"Fiji",
+        "entries":["Nadi"]
+	},
+	{
+		"name":"Canada",
+        "entries":["Banff", "Toronto"]
+	},
+	{
+		"name":"India",
+        "entries":["Tamil Nadu", "Kerala"]
+    },
+    {
+		"name":"United Kingdom",
+        "entries":["London"]
+    },
+    {
+		"name":"United Arab Emirates",
+        "entries":["Dubai"]
+    },
+    {
+		"name":"United States",
+        "entries":["California", "New York", "Hawaii", "Washington", "Arizona", "Nevada"]
+    }
+]
