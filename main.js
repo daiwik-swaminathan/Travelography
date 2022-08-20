@@ -28,14 +28,14 @@ function transformGrid(e)
                 allDropdownUls.forEach(ul => {
                     ul.setAttribute("style", "visibility: hidden; opacity: 0; position: absolute; padding-left: 0; left: 0; display: none; background: black;")
                 })
-                
+
                 dropDownUl.setAttribute("style", "visibility: visible; opacity: 0.85; display: block; min-width: 300px; text-align: left; padding-top: 20px; padding-left: 20px; z-index:999;")
                 return
             }
         }
     }  
 
-    if(locationName == 'Photography')
+    if(locationName == 'Travelography')
     {
         window.location.href = "index.html"
         return
@@ -264,7 +264,7 @@ function getMinimumNavBarUl()
 {
     return `
     <li>
-        <a class="dropdown-text">Photography &rtrif;</a>
+        <a class="dropdown-text">Travelography &rtrif;</a>
         <ul class="dropdown">
             <li>United States</li>
             <li>Canada</li>

@@ -1,31 +1,8 @@
 body
 {
 	margin:0px;
-	
-	/* background-image: radial-gradient(rgb(27, 27, 27), rgb(37, 37, 37), rgb(49, 49, 49) ,rgb(65, 65, 65), rgb(82, 82, 82));
-	background-size: 400% 400%;
-	position: relative;
-	animation: change 10s ease-in-out infinite; */
-
 	background-color: black;
 }
-
-/* @keyframes change
-{
-	0%
-	{
-        background-position: 0% 50%;
-    }
-    50%
-    {
-        background-position: 100% 50%;
-    }
-    100%
-    {
-        background-position: 0% 50%;
-    }
-} */
-
 
 .body-container
 {
@@ -37,7 +14,6 @@ a
 	color:white;
 	text-decoration: none;
 }
-
 
 .primary-navigation
 {
@@ -134,7 +110,6 @@ ul li ul li a
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	/* object-fit: none; */
 	object-position: center;
 }
 
