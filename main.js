@@ -30,9 +30,9 @@ function transformGrid(e)
             {
                 console.log('ul is hidden, going to make it visible')
                 
-                dropDownUl.className = 'mobile-ui'
+                // dropDownUl.className = 'mobile-ui'
 
-                //dropDownUl.setAttribute("style", "visibility: visible; opacity: 0.85; display: block; min-width: 300px; text-align: left; padding-top: 20px; padding-left: 20px; z-index:999;")
+                dropDownUl.setAttribute("style", "visibility: visible; opacity: 0.85; display: block; min-width: 300px; text-align: left; padding-top: 20px; padding-left: 20px; z-index:999;")
 
                 // visibility: visible, opacity: 0.85, display: block, min-width: 300px, text-align: left, padding-top: 20px, padding-left: 20px, z-index:999;
                 // border-left: 2px solid green;

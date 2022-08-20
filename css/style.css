@@ -99,7 +99,7 @@ a
 	text-decoration: none;
 	text-align: center;
 	font-family: Bradley Hand, cursive;
-	border-left: 2px solid red;
+	border-left: 2px solid green;
 }
 
 
@@ -116,19 +116,6 @@ a
 	z-index:999;
 	border-left: 2px solid green;
 } */
-
-/* test */
-.mobile-ui
-{
-	visibility: visible;
-	opacity: 0.85;
-	display: block;
-	min-width: 300px;
-	text-align: left;
-	padding-top: 20px;
-	padding-left: 20px;
-	z-index:999;
-}
 
 .primary-navigation ul li ul li
 {
