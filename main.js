@@ -1,6 +1,5 @@
 // To do
 // rename website
-// when someone clicks on the top bar links, make hidden to the lis in the uis (check mobile issue)
 // make home page dynamically loaded instead of redirected if causes issue
 
 var countries = []
@@ -13,14 +12,10 @@ function transformGrid(e)
 
     let locationName = e.target.textContent
 
-    console.log(e.target.parentNode)
-
     locationName = locationName.replace(/[^a-zA-Z. ]/g, "").trim()
 
     var parentElement = e.target.parentNode
     
-    // console.log(parentElement.tagName) = LI
-
     if(parentElement.tagName == 'LI' && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) // add the mobile check here
     {
         var dropDownUl = parentElement.querySelector('.dropdown')
@@ -28,43 +23,11 @@ function transformGrid(e)
         {
             if(dropDownUl.offsetParent == null)
             {
-                console.log('ul is hidden, going to make it visible')
-                
-                // dropDownUl.className = 'mobile-ui'
-
                 dropDownUl.setAttribute("style", "visibility: visible; opacity: 0.85; display: block; min-width: 300px; text-align: left; padding-top: 20px; padding-left: 20px; z-index:999;")
-
-                // visibility: visible, opacity: 0.85, display: block, min-width: 300px, text-align: left, padding-top: 20px, padding-left: 20px, z-index:999;
-                // border-left: 2px solid green;
-
                 return
-            }
-            else
-            {
-                console.log('ul is visible')
-
-                
-
-                // if this does not work, try doing this:
-                // dropDownUl.setAttribute("style", "visibility: hidden; opacity: 0.85; display: block; min-width: 300px; text-align: left; padding-top: 20px; padding-left: 20px; z-index:999;")
-
-                // and if that does not work, try this:
-                // visibility: hidden;
-                // opacity: 0;
-                // position: absolute;
-                // padding-left: 0;
-                // left: 0;
-                // display: none;
-                // background: black;
             }
         }
     }  
-
-    // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
-    // {
-    // }
-
-    
 
     if(locationName == 'Photography')
     {
