@@ -102,7 +102,8 @@ a
 	border-left: 2px solid yellow;
 }
 
-.primary-navigation ul li:hover > ul,
+
+/* .primary-navigation ul li:hover > ul,
 .primary-navigation ul li ul:hover
 {
 	visibility: visible;
@@ -114,7 +115,7 @@ a
 	padding-left: 20px;
 	z-index:999;
 	border-left: 2px solid green;
-}
+} */
 
 .primary-navigation ul li ul li
 {
@@ -447,7 +448,7 @@ ul li ul li a
 }
 
 
-/* @media (hover: hover) {
+@media (hover: hover) {
 	.primary-navigation ul li:hover > ul,
 	.primary-navigation ul li ul:hover
 	{
@@ -460,5 +461,5 @@ ul li ul li a
 		padding-left: 20px;
 		z-index:999;
 	}
-} */
+}
 
